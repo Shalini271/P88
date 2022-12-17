@@ -9,7 +9,7 @@ block_image_width = 5;
 block_image_height = 5;
 
 function load_img(){
-fabric.Image.fromURL("golf-h1.png", function(Img) {
+fabric.Image.fromURL("golf-h.png", function(Img) {
 	hole_obj = Img;
 	hole_obj.scaleToWidth(50);
 	hole_obj.scaleToHeight(50);
@@ -42,7 +42,7 @@ function my_keydown(e)
 {
 	keyPressed = e.keyCode;
 	console.log(keyPressed);
-    if((ball_x=hole_x)&&(ball_y=hole_y)){
+    if((ball_x==hole_x)&&(ball_y==hole_y)){
 	canvas.remove(ball_obj);
 	document.getElementById("hd3").innerHTML="You have hit the goal!";
 	document.getElementById("myCanvas").style.borderColor="red";
